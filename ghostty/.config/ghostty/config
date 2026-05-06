@@ -34,4 +34,4 @@ clipboard-write = allow
 
 # mac-specific options
 macos-option-as-alt = true
-command = /opt/homebrew/bin/tmux new-session -A -s main
+# command = /opt/homebrew/bin/tmux new-session -A -s main

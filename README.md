@@ -38,3 +38,9 @@ This creates symlinks from the expected config locations to the files in this re
 1. Move the config file/folder into the dotfiles repo, mirroring the home directory structure
 2. Run `stow <package>` to create the symlink
 3. Commit and push
+
+## Neovim
+
+- Dependencies:
+  - Basic utils: git, make, unzip, C Compiler (gcc) (`sudo apt install build-essential`)
+  - ripgrep, fd-find (`sudo apt install ripgrep fd-find`)

@@ -17,21 +17,17 @@ font-size = 18
 keybind = ctrl+left_bracket=text:\x1b
 keybind = shift+enter=text:\x1b\r
 
-macos-option-as-alt = true
 keybind = alt+up=esc:[1;3A
 keybind = alt+down=esc:[1;3B
 keybind = alt+left=esc:[1;3D
 keybind = alt+right=esc:[1;3C
 
 mouse-hide-while-typing = true
-
-macos-titlebar-proxy-icon = hidden
-title = " "
-
 custom-shader = ~/.config/ghostty/shaders/cursor.glsl
-
 clipboard-write = allow
 
 # mac-specific options
 macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
+title = " "
 # command = /opt/homebrew/bin/tmux new-session -A -s main

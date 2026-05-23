@@ -1,6 +1,6 @@
 # dotfiles
 
-(Inspired by [this](https://github.com/vossenwout/pookie-dotfiles/tree/main))
+(Inspired by [this](https://github.com/vossenwout/pookie-dotfiles/tree/main)) (also reference [dusty-phillips dotfiles](https://github.com/dusty-phillips/dotfiles))
 
 My personal configuration files for neovim, tmux, ghostty, and zsh. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
@@ -11,6 +11,7 @@ dotfiles/
 ├── neovim/.config/nvim/
 ├── tmux/.tmux.conf
 ├── ghostty/.config/ghostty/config
+├── kitty/.config/kitty/config
 └── zshrc/.zshrc
 ```
 
@@ -28,6 +29,7 @@ cd ~/dotfiles
 stow neovim
 stow tmux
 stow ghostty
+stow kitty
 stow zshrc
 ```
 

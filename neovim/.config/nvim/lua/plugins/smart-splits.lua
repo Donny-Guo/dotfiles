@@ -1,15 +1,13 @@
 return {
   "mrjones2014/smart-splits.nvim",
   build = "./kitty/install-kittens.bash",
-  -- config = function()
-  --   local smart_splits = require("smart-splits")
-  --   smart_splits.setup({
-  --     multiplexer_integration = "kitty",
-  --     at_edge = function(ctx)
-  --       return ctx.mux.next_pane(ctx.direction)
-  --     end,
-  --   })
-  -- end,
+  -- If resize/move stop working across kitty panes, run :Lazy build to reinstall the kittens.
+  opts = {
+    multiplexer_integration = "kitty",
+    at_edge = function(ctx)
+      return ctx.mux.next_pane(ctx.direction)
+    end,
+  },
   keys = {
     {
       "<C-h>",

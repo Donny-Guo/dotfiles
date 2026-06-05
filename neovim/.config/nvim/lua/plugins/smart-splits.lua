@@ -1,6 +1,15 @@
 return {
   "mrjones2014/smart-splits.nvim",
-  -- build = "./kitty/install-kittens.bash",
+  build = "./kitty/install-kittens.bash",
+  -- config = function()
+  --   local smart_splits = require("smart-splits")
+  --   smart_splits.setup({
+  --     multiplexer_integration = "kitty",
+  --     at_edge = function(ctx)
+  --       return ctx.mux.next_pane(ctx.direction)
+  --     end,
+  --   })
+  -- end,
   keys = {
     {
       "<C-h>",
@@ -35,28 +44,28 @@ return {
       function()
         require("smart-splits").resize_left()
       end,
-      desc = "Move to left window",
+      desc = "Resize left window",
     },
     {
       "<A-l>",
       function()
         require("smart-splits").resize_right()
       end,
-      desc = "Move to right window",
+      desc = "Resize right window",
     },
     {
       "<A-j>",
       function()
         require("smart-splits").resize_down()
       end,
-      desc = "Move to below window",
+      desc = "Resize below window",
     },
     {
       "<A-k>",
       function()
         require("smart-splits").resize_up()
       end,
-      desc = "Move to above window",
+      desc = "Resize above window",
     },
   },
 }

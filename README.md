@@ -4,6 +4,17 @@
 
 My personal configuration files for neovim, tmux, ghostty, and zsh. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
+**Table of Contents**:
+
+- [dotfiles](#dotfiles)
+  - [Structure](#structure)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Adding a new config](#adding-a-new-config)
+  - [Notes](#notes)
+    - [Neovim](#neovim)
+    - [Zshrc](#zshrc)
+
 ## Structure
 
 ```
@@ -21,6 +32,14 @@ dotfiles/
 brew install stow
 ```
 
+or
+
+```bash
+sudo apt update && sudo apt install stow
+```
+
+
+
 ## Installation
 
 ```bash
@@ -30,7 +49,8 @@ stow neovim
 stow tmux
 stow ghostty
 stow kitty
-stow zshrc
+# review your .zshrc file first and maybe back it up
+# stow zshrc
 ```
 
 This creates symlinks from the expected config locations to the files in this repo.
@@ -41,8 +61,26 @@ This creates symlinks from the expected config locations to the files in this re
 2. Run `stow <package>` to create the symlink
 3. Commit and push
 
-## Neovim
+## Notes
 
+### Neovim
+
+- Install nvim: https://neovim.io/doc/install/
 - Dependencies:
   - Basic utils: git, make, unzip, C Compiler (gcc) (`sudo apt install build-essential`)
   - ripgrep, fd-find (`sudo apt install ripgrep fd-find`)
+
+### Zshrc
+
+* Install oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh
+
+* install oh-my-zsh plugins: (https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh and https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+  ```bash
+  git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  ```
+
+  Note: `zsh-syntax-highlighting` needs to be put at the last of the plugins array.
+
+* Add config to your own `~/.zshrc` file

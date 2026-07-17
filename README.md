@@ -11,6 +11,7 @@ My personal configuration files for neovim, tmux, ghostty, and zsh. Managed with
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Adding a new config](#adding-a-new-config)
+  - [Linux Maintenance](#linux-maintenance)
   - [Notes](#notes)
     - [Neovim](#neovim)
     - [Zshrc](#zshrc)
@@ -19,6 +20,9 @@ My personal configuration files for neovim, tmux, ghostty, and zsh. Managed with
 
 ```
 dotfiles/
+├── docs/
+│   ├── zsh-install.md
+│   └── recommended_installation.md
 ├── neovim/.config/nvim/
 ├── tmux/.tmux.conf
 ├── ghostty/.config/ghostty/config
@@ -61,6 +65,10 @@ This creates symlinks from the expected config locations to the files in this re
 2. Run `stow <package>` to create the symlink
 3. Commit and push
 
+## Linux Maintenance
+
+- [Recommended Installation Guide & Linux System Maintenance](./docs/recommended_installation.md)
+
 ## Notes
 
 ### Neovim
@@ -72,6 +80,7 @@ This creates symlinks from the expected config locations to the files in this re
 
 ### Zshrc
 
+* [Install Zsh on Ubuntu/Debian](./docs/zsh-install.md)
 * Install oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh
 
 * install oh-my-zsh plugins: (https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh and https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
